@@ -1,0 +1,51 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Doctor Appointment</title>
+    <link href="media/layout.css" rel="stylesheet" type="text/css" />
+    <link href='media/custom.css' type="text/css" rel="stylesheet" /> 
+    <script src="js/daypilot-modal-3.10.1.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        .space {
+            margin-left: 0px;
+        }
+         .logoutbtn {
+            border-style: none;
+            border-color: inherit;
+            border-width: medium;
+            background-color:darkturquoise;
+            color: white;
+            font-size: 16px;
+            font-weight:600;
+            /*padding: 4px 4px 4px 4px;*/
+            /*margin: 8px 0;*/
+            cursor: pointer;
+            margin-left: 1200px;
+            margin-top: 0px;
+            }
+        
+    </style>
+</head>
+<body style="background-image: url('/Image/backgorund_register.jpg'); background-position:initial;-webkit-background-size: cover; -moz-background-size: cover;-o-background-size: cover; background-size:cover; background-repeat:no-repeat">
+    
+    <form runat="server" >
+        
+        <div class="header">
+            <div style="text-align: right; height: 18px; color:deepskyblue; font-size:16px">Welcome</div>
+            
+        </div>
+      <div class="main">
+            <asp:Button runat="server" ID="btn_Logout" CssClass="logoutbtn" Text="Logout" OnClick="btn_Logout_Click" Width="80px" Height="24px"  />
+            <asp:ContentPlaceHolder ID="Heading" runat="server" />
+      </div>
+            <div class="space">
+                &nbsp;
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </form>
+</body>
+</html>
